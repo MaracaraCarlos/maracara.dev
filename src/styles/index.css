@@ -1,0 +1,724 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+/* Font size */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #141414;
+}
+
+.top_page {
+  background: url("../images/avatar1-esbelt.jpg");
+  background-repeat: no-repeat;
+  background-position: 93% 0%;
+  background-size: auto 90%;
+}
+
+.header {
+  min-height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 5%;
+}
+.header .logo {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.container_icons {
+  display: flex;
+  gap: 30px;
+  padding-right: 40px;
+}
+.container_icons a {
+  transition: all 0.3s ease-out;
+}
+.container_icons a svg {
+  fill: #ffffff;
+}
+.container_icons a:hover {
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.8));
+  scale: 1.2;
+}
+
+.front_page {
+  min-height: 85vh;
+  padding-inline: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 9vh;
+  padding-bottom: 10vh;
+}
+.front_page .top_front_page h1 {
+  color: #ffffff;
+  font-size: 4rem;
+  padding-right: 40%;
+}
+.front_page .top_front_page h1 span {
+  text-decoration-line: underline;
+  text-decoration-color: #c5f82a;
+}
+.front_page .top_front_page p {
+  padding-right: 50%;
+  padding-top: 15px;
+  margin-top: 15px;
+  color: #d9d9d9;
+  line-height: 1.8rem;
+}
+
+/* animation of button contact me (starts) */
+.container_contact_btn {
+  /* SEND BUTTON */
+}
+.container_contact_btn .contact_btn {
+  color: #ffffff;
+  padding: 0.7em calc(0.7em * 1.2);
+  display: inline-block;
+  border: 3px solid transparent;
+  position: relative;
+  cursor: pointer;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+}
+.container_contact_btn .contact_btn .text {
+  font-family: "Space Grotesk", sans-serif;
+  transform: translate3d(-0.7em, 0, 0);
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+}
+.container_contact_btn .contact_btn:after {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 0;
+  right: 1.4em;
+  height: 3px;
+  background: #c5f82a;
+  transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+  transform-origin: left;
+}
+.container_contact_btn .line {
+  position: absolute;
+  background: #c5f82a;
+}
+.container_contact_btn .line.-right, .container_contact_btn .line.-left {
+  width: 3px;
+  bottom: -3px;
+  top: -3px;
+  transform: scale3d(1, 0, 1);
+}
+.container_contact_btn .line.-top, .container_contact_btn .line.-bottom {
+  height: 3px;
+  left: -3px;
+  right: -3px;
+  transform: scale3d(0, 1, 1);
+}
+.container_contact_btn .line.-right {
+  right: -3px;
+  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+  transform-origin: top;
+}
+.container_contact_btn .line.-top {
+  top: -3px;
+  transition: transform 0.08s linear 0.43s;
+  transform-origin: left;
+}
+.container_contact_btn .line.-left {
+  left: -3px;
+  transition: transform 0.08s linear 0.51s;
+  transform-origin: bottom;
+}
+.container_contact_btn .line.-bottom {
+  bottom: -3px;
+  transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+  transform-origin: right;
+}
+.container_contact_btn a:hover .text,
+.container_contact_btn a:active .text {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+}
+.container_contact_btn a:hover:after,
+.container_contact_btn a:active:after {
+  transform: scale3d(0, 1, 1);
+  right: -3px;
+  left: -3px;
+  transform-origin: right;
+  transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
+}
+.container_contact_btn a:hover .line,
+.container_contact_btn a:active .line {
+  transform: scale3d(1, 1, 1);
+}
+.container_contact_btn a:hover .line.-right,
+.container_contact_btn a:active .line.-right {
+  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+  transform-origin: bottom;
+}
+.container_contact_btn a:hover .line.-top,
+.container_contact_btn a:active .line.-top {
+  transition: transform 0.08s linear 0.4s;
+  transform-origin: right;
+}
+.container_contact_btn a:hover .line.-left,
+.container_contact_btn a:active .line.-left {
+  transition: transform 0.08s linear 0.48s;
+  transform-origin: top;
+}
+.container_contact_btn a:hover .line.-bottom,
+.container_contact_btn a:active .line.-bottom {
+  transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+  transform-origin: left;
+}
+.container_contact_btn .send_button {
+  color: #ffffff;
+  padding: 0.7em calc(0.7em * 1.2);
+  display: inline-block;
+  border: 3px solid transparent;
+  position: relative;
+  cursor: pointer;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+}
+.container_contact_btn .send_button .text {
+  font-family: "Space Grotesk", sans-serif;
+  transform: translate3d(-0.7em, 0, 0);
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+}
+.container_contact_btn .send_button:after {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 0;
+  right: 1.4em;
+  height: 3px;
+  background: #c5f82a;
+  transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+  transform-origin: left;
+}
+.container_contact_btn .line {
+  position: absolute;
+  background: #c5f82a;
+}
+.container_contact_btn .line.-right, .container_contact_btn .line.-left {
+  width: 3px;
+  bottom: -3px;
+  top: -3px;
+  transform: scale3d(1, 0, 1);
+}
+.container_contact_btn .line.-top, .container_contact_btn .line.-bottom {
+  height: 3px;
+  left: -3px;
+  right: -3px;
+  transform: scale3d(0, 1, 1);
+}
+.container_contact_btn .line.-right {
+  right: -3px;
+  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+  transform-origin: top;
+}
+.container_contact_btn .line.-top {
+  top: -3px;
+  transition: transform 0.08s linear 0.43s;
+  transform-origin: left;
+}
+.container_contact_btn .line.-left {
+  left: -3px;
+  transition: transform 0.08s linear 0.51s;
+  transform-origin: bottom;
+}
+.container_contact_btn .line.-bottom {
+  bottom: -3px;
+  transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+  transform-origin: right;
+}
+.container_contact_btn a:hover .text,
+.container_contact_btn a:active .text {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+}
+.container_contact_btn a:hover:after,
+.container_contact_btn a:active:after {
+  transform: scale3d(0, 1, 1);
+  right: -3px;
+  left: -3px;
+  transform-origin: right;
+  transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
+}
+.container_contact_btn a:hover .line,
+.container_contact_btn a:active .line {
+  transform: scale3d(1, 1, 1);
+}
+.container_contact_btn a:hover .line.-right,
+.container_contact_btn a:active .line.-right {
+  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+  transform-origin: bottom;
+}
+.container_contact_btn a:hover .line.-top,
+.container_contact_btn a:active .line.-top {
+  transition: transform 0.08s linear 0.4s;
+  transform-origin: right;
+}
+.container_contact_btn a:hover .line.-left,
+.container_contact_btn a:active .line.-left {
+  transition: transform 0.08s linear 0.48s;
+  transform-origin: top;
+}
+.container_contact_btn a:hover .line.-bottom,
+.container_contact_btn a:active .line.-bottom {
+  transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+  transform-origin: left;
+}
+
+/* animation of button contact me (ends) */
+/* Shills */
+.separator {
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.skills_container {
+  margin-bottom: 160px;
+  padding-inline: 5%;
+}
+.skills_container .logos_container {
+  display: flex;
+  gap: 10%;
+  padding-top: 60px;
+}
+.skills_container .logos_container .container_left {
+  width: 50%;
+}
+.skills_container .logos_container .container_left .titles_h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  padding-bottom: 40px;
+}
+.skills_container .logos_container .container_left .languages {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  -moz-column-gap: 0.2rem;
+       column-gap: 0.2rem;
+}
+.skills_container .logos_container .container_left .languages a {
+  text-align: center;
+  text-decoration: none;
+}
+.skills_container .logos_container .container_left .languages a svg {
+  transition: 0.3s ease-out;
+}
+.skills_container .logos_container .container_left .languages a svg:hover {
+  scale: 1.1;
+}
+.skills_container .logos_container .container_left .languages a p {
+  color: #d9d9d9;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.skills_container .logos_container .container_right {
+  width: 50%;
+}
+.skills_container .logos_container .container_right .titles_h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  padding-bottom: 40px;
+}
+.skills_container .logos_container .container_right .dev_tools {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  -moz-column-gap: 0.2rem;
+       column-gap: 0.2rem;
+}
+.skills_container .logos_container .container_right .dev_tools a {
+  text-align: center;
+  text-decoration: none;
+}
+.skills_container .logos_container .container_right .dev_tools a svg {
+  transition: 0.3s ease-out;
+}
+.skills_container .logos_container .container_right .dev_tools a svg:hover {
+  scale: 1.1;
+}
+.skills_container .logos_container .container_right .dev_tools a p {
+  color: #d9d9d9;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.section_projects {
+  padding-inline: 5%;
+  padding-bottom: 160px;
+}
+.section_projects .header_projects {
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section_projects .header_projects h1 {
+  color: #ffffff;
+  font-size: 4rem;
+}
+.section_projects .all_projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  -moz-column-gap: 5%;
+       column-gap: 5%;
+  row-gap: 70px;
+}
+.section_projects .all_projects .project_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.section_projects .all_projects .project_container .project_img_container {
+  width: 100%;
+  height: 23vw;
+  position: relative;
+  overflow: hidden;
+}
+.section_projects .all_projects .project_container .project_img_container img,
+.section_projects .all_projects .project_container .project_img_container .links-projects {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s;
+}
+.section_projects .all_projects .project_container .project_img_container .links-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+}
+.section_projects .all_projects .project_container .project_img_container .links-projects a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+.section_projects .all_projects .project_container .project_img_container .links-projects a p {
+  padding-block: 10px;
+  color: #ffffff;
+  font-weight: 700;
+  border-bottom: 2px solid #c5f82a;
+}
+.section_projects .all_projects .project_container .project_img_container .links-projects a:hover {
+  scale: 1.1;
+}
+.section_projects .all_projects .project_container .project_img_container .links-projects:hover {
+  opacity: 1;
+}
+.section_projects .all_projects .project_container h3 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding-top: 15px;
+}
+.section_projects .all_projects .project_container .labels_containers {
+  display: flex;
+  gap: 10px;
+}
+.section_projects .all_projects .project_container .labels_containers p {
+  color: #d9d9d9;
+  text-transform: uppercase;
+}
+.section_projects .all_projects .project_container .enlaces_mobile {
+  display: none;
+}
+
+.contact_section {
+  min-height: 70vh;
+  background-color: #1f1f1f;
+  padding-inline: 5%;
+  padding-top: 80px;
+  display: flex;
+  gap: 10%;
+}
+.contact_section .contact_section-left {
+  width: 100%;
+}
+.contact_section .contact_section-left h1 {
+  font-size: 4rem;
+  color: #ffffff;
+}
+.contact_section .contact_section-left p {
+  color: #d9d9d9;
+  padding-top: 40px;
+  line-height: 1.8rem;
+}
+.contact_section .formulario {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.contact_section .formulario .container_input {
+  width: 100%;
+}
+.contact_section .formulario .container_input input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1.04rem;
+  padding-inline: 15px;
+  transition: 0.2s ease;
+}
+.contact_section .formulario .container_input input::-moz-placeholder {
+  color: gray;
+  font-size: 1.04rem;
+}
+.contact_section .formulario .container_input input::placeholder {
+  color: gray;
+  font-size: 1.04rem;
+}
+.contact_section .formulario .container_input input:focus {
+  outline: none;
+  border-bottom: 2px solid #c5f82a;
+}
+.contact_section .formulario .container_input textarea {
+  width: 100%;
+  height: 80px;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1.04rem;
+  padding-inline: 15px;
+}
+.contact_section .formulario .container_input textarea::-moz-placeholder {
+  color: gray;
+  font-size: 1.04rem;
+}
+.contact_section .formulario .container_input textarea::placeholder {
+  color: gray;
+  font-size: 1.04rem;
+}
+.contact_section .formulario .container_input textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #c5f82a;
+}
+.contact_section .formulario .container_btn_send_btn #send_message_btn {
+  padding: 10px;
+  font-size: 1.02rem;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  border-bottom: 2px solid #c5f82a;
+  cursor: pointer;
+  letter-spacing: 0.2rem;
+}
+
+.error_msg {
+  color: #DE4C36;
+  font-style: italic;
+}
+
+.hide {
+  display: none;
+}
+
+.message_sent_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.message_sent_container .title_msg_sent h2 {
+  padding: 10px 0;
+  color: #ffffff;
+  border-bottom: 2px solid #c5f82a;
+}
+.message_sent_container p {
+  padding-top: 45px;
+  color: #d9d9d9;
+  line-height: 2rem;
+}
+
+footer {
+  min-height: 30vh;
+  background-color: #1f1f1f;
+  padding-inline: 5%;
+}
+footer .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+footer .footer p {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@media screen and (842px <= width <= 1023px) {
+  .top_page {
+    background-position: 100% 0;
+  }
+  .front_page {
+    padding-top: 5vh;
+  }
+  .front_page .top_front_page h1 {
+    font-size: 3.8rem;
+  }
+  .front_page .top_front_page p {
+    padding-top: 5px;
+  }
+  .section_projects .header_projects h1 {
+    font-size: 3.8rem;
+  }
+  .section_projects .all_projects .project_container .project_img_container .links-projects {
+    display: none;
+  }
+  .section_projects .all_projects .project_container .project_img_container .links-projects a {
+    display: none;
+  }
+  .section_projects .all_projects .project_container .project_img_container .links-projects:hover {
+    display: none;
+  }
+  .section_projects .all_projects .project_container .enlaces_mobile {
+    display: flex;
+  }
+  .contact_section {
+    padding-bottom: 50px;
+  }
+  .contact_section .contact_section-left h1 {
+    font-size: 3.8rem;
+  }
+}
+@media screen and (width < 842px) {
+  .header {
+    padding-top: 10px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+  }
+  .header .logo {
+    font-size: 1.8rem;
+  }
+  .container_icons {
+    padding-right: 0;
+  }
+  .top_page {
+    background-position: 50% 25%;
+    background-size: auto 40%;
+  }
+  .front_page {
+    align-items: center;
+    text-align: center;
+  }
+  .front_page .top_front_page h1 {
+    padding-top: 53vh;
+    padding-right: 0;
+    font-size: 2.8rem;
+  }
+  .front_page .top_front_page p {
+    padding-right: 0;
+    padding-bottom: 15px;
+  }
+  .skills_container .logos_container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills_container .logos_container .container_left {
+    text-align: center;
+    width: 60%;
+  }
+  .skills_container .logos_container .container_left .languages {
+    row-gap: 1rem;
+  }
+  .skills_container .logos_container .container_right {
+    padding-top: 60px;
+    text-align: center;
+    width: 60%;
+  }
+  .skills_container .logos_container .container_right .dev_tools {
+    row-gap: 1rem;
+  }
+  .section_projects .header_projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    -moz-column-gap: 5%;
+         column-gap: 5%;
+    row-gap: 20px;
+  }
+  .section_projects .header_projects h1 {
+    font-size: 2.8rem;
+  }
+  .section_projects .all_projects {
+    display: flex;
+    flex-direction: column;
+  }
+  .section_projects .all_projects .project_container .project_img_container {
+    height: 46vw; /* check again */
+  }
+  .section_projects .all_projects .project_container .project_img_container img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .section_projects .all_projects .project_container .project_img_container .links-projects {
+    display: none;
+  }
+  .section_projects .all_projects .project_container .project_img_container .links-projects a {
+    display: none;
+  }
+  .section_projects .all_projects .project_container .project_img_container .links-projects:hover {
+    display: none;
+  }
+  .section_projects .all_projects .project_container .enlaces_mobile {
+    display: flex;
+    gap: 20px;
+  }
+  .section_projects .all_projects .project_container .enlaces_mobile a {
+    text-decoration: none;
+  }
+  .section_projects .all_projects .project_container .enlaces_mobile a p {
+    padding-block: 10px;
+    color: #ffffff;
+    font-weight: 700;
+    border-bottom: 2px solid #c5f82a;
+    letter-spacing: 0.2rem;
+  }
+  .contact_section {
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .contact_section .contact_section-left {
+    text-align: center;
+  }
+  .contact_section .contact_section-left h1 {
+    font-size: 2.8rem;
+  }
+  footer .footer {
+    flex-direction: column;
+    gap: 25px;
+  }
+  footer .footer p {
+    font-size: 1.8rem;
+  }
+}/*# sourceMappingURL=index.css.map */
